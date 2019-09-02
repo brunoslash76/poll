@@ -1,1 +1,53 @@
 /* You can add global styles to this file, and also import other style files */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    font-family: sans-serif;
+}
+
+body {
+    background-color: #333;
+}
+
+
+/* Global Styles for Forms and Cards */
+
+/* FORM */
+.form-control {
+    color: white;
+    display: flex;
+    flex-flow: column;
+    padding-bottom: 20px;
+}
+
+.form-control--input {
+    height: 35px;
+    padding-left: 10px;
+    font-size: 18px;
+}
+
+.btn {
+    height: 40px;
+    width: 150px;
+    font-size: 18px;
+    border: none;
+    outline: transparent;
+}
+
+.btn-primary {
+    background-color: #ff5600;
+    color: white;
+    font-weight: 400;
+}
+
+
+/* CARD */
+.card {
+    background-color: rgba(255,255,255, 0.2);
+    padding: 30px;
+}
+

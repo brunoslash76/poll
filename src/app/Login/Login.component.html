@@ -1,3 +1,24 @@
-<p>
-  Login works!
-</p>
+<section class="container">
+
+  <div class="card">
+    <form *ngIf="isToRegister" #loginForm="ngForm" (ngSubmit)="login()">
+
+      <div class="form-control">
+        <input class="form-control--input" type="text" name="username" 
+        required [(ngModel)]="userInfo.username" placeholder="Username">
+      </div>
+
+      <div class="form-control">
+        <input class="form-control--input" type="password" name="password" 
+        required [(ngModel)]="userInfo.password" placeholder="Password">
+      </div>
+
+      <button class="btn btn-primary" type="submit">Login</button>
+
+      <a href="#" (click)="toggleLoginRegister()">Cadastrar uma conta</a>
+    </form>
+
+    <app-Register></app-Register>
+  </div>
+
+</section>
