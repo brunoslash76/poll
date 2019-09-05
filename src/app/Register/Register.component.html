@@ -1,3 +1,28 @@
-<p>
-  Register works!
-</p>
+<app-Welcome></app-Welcome>
+
+<section class="container">
+  <div class="card">
+    <form #registerForm (ngSubmit)="register()">
+      <h2 class="form-control--heading">Cadastre-se gratuitamente</h2>
+      <p class="error-message" *ngIf="errorMessage">{{errorMessage}}</p>
+      <div class="form-control">
+        <input class="form-control--input" type="text" required name="username" [(ngModel)]="model.username"
+          placeholder="Username">
+      </div>
+      <div class="form-control">
+        <input class="form-control--input" type="email" required name="email" [(ngModel)]="model.email"
+          placeholder="Email">
+      </div>
+      <div class="form-control">
+        <input class="form-control--input" type="password" required name="password" [(ngModel)]="model.password"
+          placeholder="Password">
+      </div>
+
+      <div class="form-control--button-container">
+        <button class="btn btn-secondary" (click)="cancel()">Cancel</button>
+        <button class="btn btn-primary" type="submit">Submit</button>
+      </div>
+
+    </form>
+  </div>
+</section>

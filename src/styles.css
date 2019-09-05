@@ -30,6 +30,28 @@ body {
     font-size: 18px;
 }
 
+.form-control--button-container {
+    padding-top: 20px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.form-control--heading {
+    color: #581845;
+    padding-bottom: 30px;
+}
+
+.error-message {
+    color: #f98b8b;
+    padding-bottom: 20px;
+}
+
+.success-message {
+    color: #58bd58;
+    padding-bottom: 20px;
+}
+/* BUTTON CONFIG */
+
 .btn {
     height: 40px;
     width: 150px;
@@ -44,10 +66,16 @@ body {
     font-weight: 400;
 }
 
+.btn-secondary {
+    background-color: #900c3f;
+    color: white;
+    font-weight: 400;
+}
+
 
 /* CARD */
 .card {
     background-color: rgba(255,255,255, 0.2);
-    padding: 30px;
+    padding: 30px 20px;
 }
 

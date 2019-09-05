@@ -1,3 +1,15 @@
-<p>
-  Poll works!
-</p>
+<section class="restaurant-list" >
+  <form #pollForm (ngSubmit)="rateRestaurant()">
+    <header class="form-header">
+      <h2>{{restaurant.name}}</h2>
+    </header>
+    <div>
+      <span class="ratting">{{model.ratting ? model.ratting : 0}}</span>
+    </div>
+    <div class="set-range">
+      <input type="range" name="ratting" id="ratting" step="1" min="1" max="5" [(ngModel)]="model.ratting">
+    </div>
+    <button class="btn btn-primary" type="submit">Submit</button>
+  </form>
+
+</section>

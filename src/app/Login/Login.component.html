@@ -1,24 +1,26 @@
+<app-Welcome></app-Welcome>
 <section class="container">
 
   <div class="card">
-    <form *ngIf="isToRegister" #loginForm="ngForm" (ngSubmit)="login()">
-
+    <form #loginForm="ngForm" (ngSubmit)="login()">
+      <p class="success-message" *ngIf="registrationMessage">{{registrationMessage}}</p>
+      <h2 class="form-control--heading">Login</h2>
+      <p class="error-message">{{errorMessage}}</p>
       <div class="form-control">
-        <input class="form-control--input" type="text" name="username" 
-        required [(ngModel)]="userInfo.username" placeholder="Username">
+        <input class="form-control--input" type="text" name="username" required [(ngModel)]="userInfo.username"
+          placeholder="Username">
       </div>
 
       <div class="form-control">
-        <input class="form-control--input" type="password" name="password" 
-        required [(ngModel)]="userInfo.password" placeholder="Password">
+        <input class="form-control--input" type="password" name="password" required [(ngModel)]="userInfo.password"
+          placeholder="Password">
       </div>
 
-      <button class="btn btn-primary" type="submit">Login</button>
-
-      <a href="#" (click)="toggleLoginRegister()">Cadastrar uma conta</a>
+      <div class="form-control--button-container">
+        <button class="btn btn-secondary" type="button" (click)="navigateToRegister()">Nova conta</button>
+        <button class="btn btn-primary" type="submit" >Login</button>
+      </div>
     </form>
-
-    <app-Register></app-Register>
   </div>
 
 </section>

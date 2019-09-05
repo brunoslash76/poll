@@ -1,0 +1,15 @@
+.dashboard-container {
+    padding: 20px;
+}
+
+.restaurants-list {
+    display: flex;
+    justify-content: space-between;
+    color: white;
+    padding-bottom: 30px;
+}
+
+.container-header {
+    padding-bottom: 40px;
+    color: #992e57;
+}

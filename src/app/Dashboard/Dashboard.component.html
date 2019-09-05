@@ -1,3 +1,17 @@
-<p>
-  Dashboard works!
-</p>
+<section class="dashboard-container">
+  <header class="container-header">
+    <h2>Restaurantes Avaliados</h2>
+  </header>
+  <div>
+    <article class="restaurants-list" *ngFor="let restaurant of restaurants">
+      <div>
+        <h3 style="padding-bottom: 10px;">{{restaurant.name}}</h3>
+        <button class="btn btn-primary" type="button" (click)="rate(restaurant.id)">Avaliar</button>
+      </div>
+      <div>
+          <div style="padding-bottom: 10px;">Avaliação: {{(restaurant.ratting / restaurant.rattingCount).toFixed(1) === 'NaN' ? 0 : (restaurant.ratting / restaurant.rattingCount).toFixed(1)}}</div>
+          <small>(De: {{restaurant.rattingCount}} {{restaurant.rattingCount > 1 || restaurant.rattingCount === 0? 'avaliações' : 'avalição'}})</small>
+      </div>
+    </article>
+  </div>
+</section>
